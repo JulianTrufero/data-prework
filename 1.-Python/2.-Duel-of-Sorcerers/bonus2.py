@@ -73,6 +73,7 @@ if clash_counter[:3] == 'G':
 elif clash_counter[:3] == 'S':
     saruman_wins += 1
 """
+INTENTAR CON BREAK
 else:
     print('Tie')
 
