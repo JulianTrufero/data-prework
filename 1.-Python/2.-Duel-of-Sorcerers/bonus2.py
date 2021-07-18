@@ -13,7 +13,7 @@ gandalf = ['Fireball', 'Lightning bolt', 'Lightning bolt', 'Magic arrow', 'Fireb
            'Magic arrow', 'Lightning bolt', 'Fireball', 'Fireball', 'Fireball']
 saruman = ['Contagion', 'Contagion', 'Black Tentacles', 'Fireball', 'Black Tentacles', 
            'Lightning bolt', 'Magic arrow', 'Contagion', 'Magic arrow', 'Magic arrow']
-
+           
 spells = len(gandalf)
 
 #3. Create two variables called gandalf_power and saruman_power to store the list of spell powers of each sorcerer.
