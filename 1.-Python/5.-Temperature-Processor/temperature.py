@@ -17,6 +17,11 @@ for i in range(0, len(temperatures_C)):
 
 print('The temperatures exceeding 70ºC are:', exceeding_temp)
 
+#4. Find the average temperature of the day and store it in a variable
+avg_temperature_C = sum(temperatures_C)/len(temperatures_C)
+
+print('The average temperature is:', avg_temperature_C)
+
 #5. Imagine that there was a sensor failure at 3am and the data for that specific hour was not recorded. How would you estimate the missing value? Replace the current value of the list at 3am for an estimation
 def missing_value(i):
     missing_value = temperatures_C[i-1] + ((temperatures_C[i+1] - temperatures_C[i-1])/((i+1) - (i-1))) * (i - (i-1))
@@ -26,11 +31,6 @@ temperatures_C.insert(3,missing_value(3))
 temperatures_C.pop(4)
 
 print('Temperatures with missing value replacement', temperatures_C)
-
-#4. Find the average temperature of the day and store it in a variable
-avg_temperature_C = sum(temperatures_C)/len(temperatures_C)
-
-print('The average temperature is:', avg_temperature_C)
 
 #6.Bonus: the maintenance staff is from the United States and does not uderstand the international metric system. Help them by converting the temperatures from Celsius to Fahrenheit
 temperatures_F = []
@@ -59,7 +59,7 @@ for i in range(0, len(temperatures_C)):
 print('Exceding temperature hours:', excding_temp_hrs)
 
 #2. Check if the list you created in step 1 has more than 4 consecutive hours
-#3. Make the decision!
+
 if {excding_temp_hrs[1] == excding_temp_hrs[0] + 1 and
     excding_temp_hrs[2] == excding_temp_hrs[1] + 1 and
     excding_temp_hrs[3] == excding_temp_hrs[2] + 1 and 
