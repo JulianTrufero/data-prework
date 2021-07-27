@@ -66,27 +66,30 @@ for k in range(0, len(gandalf_powers)):
     else:
         clash_counter.append('S') 
 
+print('Clash winners', clash_counter)
 
-if clash_counter[:3] == 'G':
+battle = []
+
+for j in range(len(clash_counter) - 2):
+    if clash_counter[j] == clash_counter[j+1] and clash_counter[j+1] == clash_counter[j+2]:
+        battle.append(clash_counter[j])
+
+if battle[0] == 'G':
     gandalf_wins += 1
-
-elif clash_counter[:3] == 'S':
+    print('Gandalf won 3 clashes in a row')
+elif battle[0] == 'S':
     saruman_wins += 1
-"""
-INTENTAR CON BREAK
-else:
-    print('Tie')
+    print('Gandalf won 3 clashes in a row')
 
 if gandalf_wins > saruman_wins:
-    print('Gandalf wins')
+    print('Gandalf won the battle')
 
 elif gandalf_wins == saruman_wins:
     print('Tie')
-
+    
 else: 
-    print('Saruman wins') 
+    print('Saruman won the battle') 
 
-"""
 #5. Find the average spell power of Gandalf and Saruman.
 
 avg_power_gandalf = sum(gandalf_powers)/len(gandalf_powers)
