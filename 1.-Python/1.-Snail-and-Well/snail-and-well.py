@@ -10,6 +10,7 @@ while days * snail_position < well_height:
     if days * snail_position >= well_height:
         print('The snail needs', days, 'days to escape the well')
 
+#BONUS
 #1. How many days does it take for the snail to escape the well?
 
 well_height = 125
