@@ -56,7 +56,7 @@ excding_temp_hrs = []
 for i in range(0, len(temperatures_C)):
     if temperatures_C[i] > 70:
         excding_temp_hrs.append(i)
-print(excding_temp_hrs)
+print('Exceding temperature hours:', excding_temp_hrs)
 
 #2. Check if the list you created in step 1 has more than 4 consecutive hours
 #3. Make the decision!
@@ -64,8 +64,7 @@ if {excding_temp_hrs[1] == excding_temp_hrs[0] + 1 and
     excding_temp_hrs[2] == excding_temp_hrs[1] + 1 and
     excding_temp_hrs[3] == excding_temp_hrs[2] + 1 and 
     excding_temp_hrs[4] == excding_temp_hrs[3] + 1}:
-    print('The exceeding temperature list has more than 4 consecutive hours')
-    print('The cooling system needs to be replaced')
+    print('The exceeding temperature list has more than 4 consecutive hours: the cooling system needs to be replaced')
 elif max_temperature > 80:
     print('The cooling system needs to be replaced')
 elif avg_temperature_C > 65:

@@ -16,10 +16,16 @@ saruman = ['Contagion', 'Contagion', 'Black Tentacles', 'Fireball', 'Black Tenta
            
 spells = len(gandalf)
 
+#2. Create two variables called gandalf_wins and saruman_wins. Set both of them to 0.
+gandalf_wins = 0
+saruman_wins = 0
+
 #3. Create two variables called gandalf_power and saruman_power to store the list of spell powers of each sorcerer.
 
 gandalf_powers = [] 
 saruman_powers = []
+
+#4. The battle starts! Using the variables you've created above, code the execution of spell clashes. Remember that a sorcerer wins if he succeeds in winning 3 spell clashes in a row
 
 for i in range(0, spells):
     if gandalf[i] == 'Fireball':
@@ -53,12 +59,7 @@ for i in range(0, spells):
     elif saruman[i] == 'Contagion' :
         saruman_powers.append(45)
     
-#4. The battle starts! Using the variables you've created above, code the execution of spell clashes. Remember that a sorcerer wins if he succeeds in winning 3 spell clashes in a row
-
 clash_counter = []
-
-gandalf_wins = 0
-saruman_wins = 0
 
 for k in range(0, len(gandalf_powers)):
     if gandalf_powers[k] > saruman_powers[k]:
@@ -79,7 +80,7 @@ if battle[0] == 'G':
     print('Gandalf won 3 clashes in a row')
 elif battle[0] == 'S':
     saruman_wins += 1
-    print('Gandalf won 3 clashes in a row')
+    print('Saruman won 3 clashes in a row')
 
 if gandalf_wins > saruman_wins:
     print('Gandalf won the battle')
